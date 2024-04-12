@@ -20,9 +20,13 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return background(isLight: Provider.of<ThemePageProvider>(context).isLighEnable, page: HomePage2(),);
+    return background(
+      isLight: Provider.of<ThemePageProvider>(context).isLighEnable,
+      page: HomePage2(),
+    );
   }
 }
+
 class HomePage2 extends StatefulWidget {
   const HomePage2({super.key});
 
@@ -33,7 +37,7 @@ class HomePage2 extends StatefulWidget {
 class _HomePage2State extends State<HomePage2> {
   @override
   Widget build(BuildContext context) {
-    return  Column(
+    return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Center(
@@ -53,11 +57,10 @@ class _HomePage2State extends State<HomePage2> {
                         child: Text(
                       serage,
                       style: TextStyle(
-                           color:
-                          Provider.of<ThemePageProvider>(context).isLighEnable
-            ? lightOrange
-           
-            :  brownColor, 
+                          color: Provider.of<ThemePageProvider>(context)
+                                  .isLighEnable
+                              ? lightOrange
+                              : brownColor,
                           fontWeight: FontWeight.w400,
                           fontSize: 30),
                     ))),
@@ -69,61 +72,54 @@ class _HomePage2State extends State<HomePage2> {
             ),
           ),
         ),
-
         Stack(
-          alignment:Alignment.topRight,
-          clipBehavior: Clip.none,
-          children: [Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: NoteContainer(),
-          ),
-          Positioned(
-            top: -20,
-            right: 0,
-            child: Container(
-              clipBehavior: Clip.antiAlias,
-              width: 50,
-              height: 50,
-              decoration: BoxDecoration(
-                shape:BoxShape.circle ,
-              color: beigecolor,
-                image: DecorationImage(image: AssetImage("assets/images/note.png"),fit:BoxFit.fill)),)),
-                Positioned(
-                  top:10,
+            alignment: Alignment.topRight,
+            clipBehavior: Clip.none,
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: NoteContainer(),
+              ),
+              Positioned(
+                  top: -20,
+                  right: 0,
+                  child: Container(
+                    clipBehavior: Clip.antiAlias,
+                    width: 50,
+                    height: 50,
+                    decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        // color: beigecolor,
+                        image: DecorationImage(
+                            image: AssetImage("assets/images/note.png"),
+                            fit: BoxFit.fill)),
+                  )),
+              Positioned(
+                  top: 10,
                   // bottom: 10,
-                   right: 5,
+                  right: 5,
                   left: 5,
-                  child: Text("عند الفجر سوف يتم عرض فقط الختم الفجرية للمستخدم\n وستوضع باقي الختم بالمحفوظات وباقي\n أوقات النهار بالعكس"
-                  ,style: TextStyle(color: brownColor,fontSize: 18),
+                  child: Text(
+                    "عند الفجر سوف يتم عرض فقط الختم الفجرية للمستخدم\n وستوضع باقي الختم بالمحفوظات وباقي\n أوقات النهار بالعكس",
+                    style: TextStyle(color: brownColor, fontSize: 18),
                   ))
-          ]
-        ),
-        Stack(
-          clipBehavior: Clip.none,
-          children: [
-
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Container(
-                width: 348,
-                height: 122,
-                decoration: BoxDecoration(
+            ]),
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Container(
+              width: 348,
+              height: 122,
+              decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
-                  color:Provider.of<ThemePageProvider>(context).isLighEnable?
-                   redbrown:browcontainer
-                  
-                  
-                  ),),
-            ),
-            // Column(children: [
-            
-            //   HomePage4()
-            // ],)
-            ],
+                  color: Provider.of<ThemePageProvider>(context).isLighEnable
+                      ? redbrown
+                      : browcontainer),
+              // child: Row(
+              //   children: [HomePage4(), HomePage4()],
+              // )
+              ),
         )
-        
       ],
     );
-    
   }
 }

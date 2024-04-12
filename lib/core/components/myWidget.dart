@@ -67,7 +67,7 @@ Widget circuler_container(
 //image: DecorationImage(image: AssetImage(image))
       ),
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+       // mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Center(
@@ -81,14 +81,13 @@ Widget circuler_container(
               ),
             ),
           ),
-          Align(
-            alignment: Alignment.center,
+          Center(
             child: Container(
-                height: 29,
+                height: 33,
                 width: 72,
                 child: Text(
                   text,
-                  style: TextStyle(fontSize: 20, color: Color(0xFF412B2D)),
+                  style: TextStyle(fontSize: 11, fontWeight: FontWeight.w600,color: Color(0xFF412B2D)),
                 )),
           ),
         ],
@@ -246,7 +245,7 @@ class ADD_KItma_Container extends StatelessWidget {
               children: [
                 SizedBox(
                   width: 80,
-                  height: 22,
+                //  height: 22,
                   child: Column(
                  //   mainAxisSize: MainAxisSize.min,
                     children: [
@@ -257,7 +256,7 @@ class ADD_KItma_Container extends StatelessWidget {
                 ),
                 SizedBox(
                   width: 100,
-                  height: 30,
+               //   height: 30,
                   child: Column(
                  //   mainAxisSize: MainAxisSize.min,
                     children: [

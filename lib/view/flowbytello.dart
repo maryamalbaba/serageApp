@@ -19,18 +19,13 @@ class _HomePageState extends State<HomePage4>
         AnimationController(vsync: this, duration: Duration(seconds:  1));
   }
 
-  // List<IconData> list = [
-  //   Icons.home,
-  //   Icons.youtube_searched_for,
-  //   Icons.reddit,
-  //   Icons.facebook
-  // ];
+ 
 
 
 List<Widget>list_of_container=[
 circuler_container(image: 'assets/images/counter.png', text: 'تسبيح',height:95 ,width:100),
-circuler_container(image: 'assets/images/wearedgroub.png', text: 'جلسة ذكر ',height:95 ,width:100),
-circuler_container(image: 'assets/images/race.jpg', text: 'مسابقة بِورد',height:95 ,width:100),
+circuler_container(image: 'assets/images/wearedgroub.png', text: 'جلسة\n ذكر ',height:95 ,width:100),
+circuler_container(image: 'assets/images/race.png', text: 'مسابقة\n بِورد',height:95 ,width:100),
 
 ];
 
@@ -51,14 +46,12 @@ circuler_container(image: 'assets/images/race.jpg', text: 'مسابقة بِور
                     ? controller.reverse()
                     : controller.forward();
               },
-              // child: Container(
-              //   color: Colors.red,
-              //   child: Icon(list[index]),
-              // ),
+              child: list_of_container[index]),
+              ),
             ),
           ),
-        ),
-      ),
+       
+      
     );
   }
 }

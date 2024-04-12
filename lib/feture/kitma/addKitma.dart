@@ -71,32 +71,38 @@ class _Add_Kitma_PageState extends State<Add_Kitma_Page> {
                           color: Colors.white,
                           width: 200,
                           height: 30,
-                          child: DropdownButton(
-                              hint: Text("اختر"),
-                              value: selectedValue,
-                              items: [
-                                DropdownMenuItem(
-                                    value: "قضاء حاجة",
-                                    child: Text("قضاء حاجة")),
-                                DropdownMenuItem(
-                                  value: "تفريج هم",
-                                  child: Text("تفريج هم"),
-                                ),
-                                DropdownMenuItem(
-                                    value: " شفاء مريض",
-                                    child: Text(" شفاء مريض")),
-                                DropdownMenuItem(
-                                    value: "على روح مسلم",
-                                    child: Text("على روح مسلم")),
-                                DropdownMenuItem(
-                                    value: " تيسير أمر",
-                                    child: Text(" تيسير أمر")),
-                              ],
-                              onChanged: (value) {
-                                setState(() {
-                                  selectedValue = value!;
+                          child: StatefulBuilder(
+                            builder: (BuildContext context, void Function(void Function()) setState) { 
+                              return
+                              DropdownButton(
+                                hint: Text("اختر"),
+                                value: selectedValue,
+                                items: [
+                                  DropdownMenuItem(
+                                      value: "قضاء حاجة",
+                                      child: Text("قضاء حاجة")),
+                                  DropdownMenuItem(
+                                    value: "تفريج هم",
+                                    child: Text("تفريج هم"),
+                                  ),
+                                  DropdownMenuItem(
+                                      value: " شفاء مريض",
+                                      child: Text(" شفاء مريض")),
+                                  DropdownMenuItem(
+                                      value: "على روح مسلم",
+                                      child: Text("على روح مسلم")),
+                                  DropdownMenuItem(
+                                      value: " تيسير أمر",
+                                      child: Text(" تيسير أمر")),
+                                ],
+                                onChanged: (value) {
+                                  setState(() {
+                                    selectedValue = value!;
+                                  });
                                 });
-                              }),
+                             },
+                           // child: 
+                          ),
                         ),
                       ),
                       Padding(
