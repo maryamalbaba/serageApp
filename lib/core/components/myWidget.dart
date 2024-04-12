@@ -256,8 +256,8 @@ class ADD_KItma_Container extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  width: 80,
-                  height: 22,
+                  width: 100,
+                  height: 30,
                   child: Column(
                  //   mainAxisSize: MainAxisSize.min,
                     children: [

@@ -141,14 +141,14 @@ class _Add_Kitma_PageState extends State<Add_Kitma_Page> {
                                     lastDate: DateTime.parse('2050-12-12'))
                                 .then((value) => {
                                   if(value!=null){
-                                    StartDateController.text =
+                                    EndDateController.text =
                                           DateFormat.yMMMd().format(value)
                                   }
                                       
                                     });
                           },
                           KeyBoardType: TextInputType.text,
-                          controller: StartDateController,
+                          controller: EndDateController,
                         ),
                       ),
                       SizedBox(
