@@ -1,6 +1,6 @@
 import 'package:finalserage/core/components/myWidget.dart';
 import 'package:finalserage/core/models/kitmaMode.dart';
-import 'package:finalserage/core/services/kitmaService/getKitma.dart';
+import 'package:finalserage/core/services/Kitma_services/getKitma.dart';
 import 'package:flutter/material.dart';
 
 class View_Kitma_Page extends StatelessWidget {

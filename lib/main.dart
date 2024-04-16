@@ -2,6 +2,12 @@ import 'package:finalserage/core/theme/modetheme.dart';
 import 'package:finalserage/core/theme/theme.dart';
 import 'package:finalserage/feture/kitma/addKitma.dart';
 import 'package:finalserage/feture/kitma/kitmabackgroung.dart';
+import 'package:finalserage/feture/kitma/viewKitma.dart';
+import 'package:finalserage/feture/theker/addTheker.dart';
+import 'package:finalserage/feture/theker/thekerbackground.dart';
+
+import 'package:finalserage/view/flowPages.dart/flowbytello.dart';
+import 'package:finalserage/view/flowPages.dart/suraFlow.dart';
 import 'package:finalserage/view/homePage.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -24,7 +30,7 @@ class MyApp extends StatelessWidget {
         theme: Provider.of<ThemePageProvider>(context).isLighEnable
             ? modetheme.lightmode
             : modetheme.darkmode
-            ,home: Kitmaebackground(),
+            ,home: Theker_Background(),
             
             );
   }

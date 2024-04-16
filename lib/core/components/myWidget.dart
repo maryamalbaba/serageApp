@@ -67,7 +67,7 @@ Widget circuler_container(
 //image: DecorationImage(image: AssetImage(image))
       ),
       child: Column(
-       // mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Center(
@@ -87,7 +87,10 @@ Widget circuler_container(
                 width: 72,
                 child: Text(
                   text,
-                  style: TextStyle(fontSize: 11, fontWeight: FontWeight.w600,color: Color(0xFF412B2D)),
+                  style: TextStyle(
+                      fontSize: 11,
+                      fontWeight: FontWeight.w600,
+                      color: Color(0xFF412B2D)),
                 )),
           ),
         ],
@@ -220,15 +223,15 @@ class ADD_KItma_Container extends StatelessWidget {
                 ),
               ),
               //Padding(
-               // padding: const EdgeInsets.only(botto),
+              // padding: const EdgeInsets.only(botto),
               //  child:
-                 Container(
-                  width: 90,
-                  height: 90,
-                  decoration: BoxDecoration(
-                      image: DecorationImage(
-                          image: AssetImage("assets/images/note.png"))),
-               // ),
+              Container(
+                width: 90,
+                height: 90,
+                decoration: BoxDecoration(
+                    image: DecorationImage(
+                        image: AssetImage("assets/images/note.png"))),
+                // ),
               )
             ],
           ),
@@ -245,9 +248,9 @@ class ADD_KItma_Container extends StatelessWidget {
               children: [
                 SizedBox(
                   width: 80,
-                //  height: 22,
+                  //  height: 22,
                   child: Column(
-                 //   mainAxisSize: MainAxisSize.min,
+                    //   mainAxisSize: MainAxisSize.min,
                     children: [
                       Text("تاريخ الانتهاء"),
                       Text(EndDate, style: TextStyle(color: Color(0xFFB99470)))
@@ -256,9 +259,9 @@ class ADD_KItma_Container extends StatelessWidget {
                 ),
                 SizedBox(
                   width: 100,
-               //   height: 30,
+                  //   height: 30,
                   child: Column(
-                 //   mainAxisSize: MainAxisSize.min,
+                    //   mainAxisSize: MainAxisSize.min,
                     children: [
                       Text("تاريخ البدء"),
                       Text(
@@ -273,6 +276,99 @@ class ADD_KItma_Container extends StatelessWidget {
           )
         ],
       ),
+    );
+  }
+}
+
+class Add_theker_container extends StatelessWidget {
+  Add_theker_container({
+    Key? key,
+    required this.name,
+  }) : super(key: key);
+  final String name;
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+        width: 309,
+        height: 195,
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10), color: beigecolor),
+        child: Column(children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text(
+                  name,
+                  style: TextStyle(fontSize: 25),
+                ),
+              ),
+              //Padding(
+              // padding: const EdgeInsets.only(botto),
+              //  child:
+              Container(
+                width: 90,
+                height: 90,
+                decoration: BoxDecoration(
+                    image: DecorationImage(
+                        image: AssetImage("assets/images/note.png"))),
+                // ),
+              )
+            ],
+          ),
+          Divider(
+            endIndent: 10,
+            indent: 10,
+            color: Color(0XFF5C3B13),
+          ),
+        ]));
+  }
+}
+
+class ShareContainer extends StatelessWidget {
+  ShareContainer({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Stack(
+      clipBehavior: Clip.none,
+      children: [
+        Container(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(
+                Icons.share,
+                color: Colors.white,
+              ),
+              Text(
+                "مشاركة",
+                style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.w500,
+                    fontSize: 15),
+              )
+            ],
+          ),
+          width: 110,
+          height: 30,
+          decoration: BoxDecoration(
+              color: lightbrown, borderRadius: BorderRadius.circular(5)),
+        ),
+        Positioned(
+          top: -30,
+          // right: 10,
+          left: 70,
+          child: Container(
+            width: 30,
+            height: 70,
+            decoration: BoxDecoration(
+                image: DecorationImage(
+                    image: AssetImage("assets/images/sparkel.png"))),
+          ),
+        )
+      ],
     );
   }
 }
