@@ -10,7 +10,7 @@ class ThemePageProvider with ChangeNotifier{
   }
 
 ChangeMode(){
-if((DateTime.now().minute>=49)&&(DateTime.now().minute<=53)){
+if((DateTime.now().minute>=20)&&(DateTime.now().minute<=40)){
   isLighEnable=false;
   print("yes");
   notifyListeners();

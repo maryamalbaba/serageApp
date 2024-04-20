@@ -1,17 +1,20 @@
 import 'package:dio/dio.dart';
 import 'package:finalserage/core/models/theker.dart';
+import 'package:finalserage/core/models/thekerBack.dart';
 
-creat_theker(thekerModel theker) async {
+creat_theker(ThekerModelll theker) async {
  Dio dio=Dio();
 try{
 
  
-Response response=await  dio.post("https://661bee3ee7b95ad7fa6953c6.mockapi.io/api/v1/theker",
+Response response=await  dio.post("https://661bee3ee7b95ad7fa6953c6.mockapi.io/api/v1/Thekerback",
 data: {
 "id":theker.id,
 "proof":theker.proof,
 "name":theker.name,
-"num":theker.num
+"Fullnum":theker.Fullnum,
+"achievment":theker.achievment,
+"proof":theker.proof
 
 }
 );

@@ -5,3 +5,4 @@ String PrivateKitma="ختمة خاصة";
 String PublicKitma="ختمة عامة";
 
 
+String selectedValue2 = "استغفار";

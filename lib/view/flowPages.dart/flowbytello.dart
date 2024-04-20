@@ -4,14 +4,14 @@ import 'package:finalserage/core/components/myWidget.dart';
 import 'package:finalserage/view/homePage.dart';
 import 'package:flutter/material.dart';
 
-class tassbehFlow extends StatefulWidget {
-  const tassbehFlow({super.key});
+class ThekerFlow extends StatefulWidget {
+  const ThekerFlow({super.key});
 
   @override
-  State<tassbehFlow> createState() => _tassbehFlow();
+  State<ThekerFlow> createState() => _tassbehFlow();
 }
 
-class _tassbehFlow extends State<tassbehFlow>
+class _tassbehFlow extends State<ThekerFlow>
     with SingleTickerProviderStateMixin {
   late AnimationController controller;
 

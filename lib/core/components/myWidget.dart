@@ -1,5 +1,7 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 
+
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -63,8 +65,8 @@ Widget circuler_container(
       width: width,
       decoration: BoxDecoration(
         shape: BoxShape.circle,
-        color: beigecolor,
-//image: DecorationImage(image: AssetImage(image))
+        color: offWhite,
+
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -96,6 +98,7 @@ Widget circuler_container(
         ],
       ),
     );
+
 Widget WhiteTextfield({
   required TextEditingController controller,
   required TextInputType KeyBoardType,
@@ -120,11 +123,12 @@ Widget WhiteTextfield({
         ),
       ),
     );
+
 Widget bottomContainer({Widget? its_child}) => Container(
       width: 257,
       height: 42,
       decoration: BoxDecoration(
-          color: beigecolor, borderRadius: BorderRadius.circular(10)),
+          color: offWhite, borderRadius: BorderRadius.circular(10)),
       child: its_child,
     );
 Widget myTextField(
@@ -150,7 +154,7 @@ Widget NoteContainer() => Container(
       width: 309,
       height: 151,
       decoration: BoxDecoration(
-        color: beigecolor,
+        color: offWhite,
         borderRadius: BorderRadius.circular(10),
       ),
     );
@@ -209,7 +213,7 @@ class ADD_KItma_Container extends StatelessWidget {
       width: 309,
       height: 195,
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10), color: beigecolor),
+          borderRadius: BorderRadius.circular(10), color: offWhite),
       child: Column(
         children: [
           Row(
@@ -222,16 +226,14 @@ class ADD_KItma_Container extends StatelessWidget {
                   style: TextStyle(fontSize: 25),
                 ),
               ),
-              //Padding(
-              // padding: const EdgeInsets.only(botto),
-              //  child:
+              
               Container(
                 width: 90,
                 height: 90,
                 decoration: BoxDecoration(
                     image: DecorationImage(
                         image: AssetImage("assets/images/note.png"))),
-                // ),
+               
               )
             ],
           ),
@@ -284,15 +286,27 @@ class Add_theker_container extends StatelessWidget {
   Add_theker_container({
     Key? key,
     required this.name,
+    required this.end_date,
+       required this.fullnum,
+       required this.start_date,
+        required this.achievment,
+
+
+       
   }) : super(key: key);
   final String name;
+  final String end_date;
+  final String fullnum;
+  final String start_date;
+  final String achievment;
+  
   @override
   Widget build(BuildContext context) {
     return Container(
         width: 309,
         height: 195,
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(10), color: beigecolor),
+            borderRadius: BorderRadius.circular(10), color: offWhite),
         child: Column(children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -322,6 +336,37 @@ class Add_theker_container extends StatelessWidget {
             indent: 10,
             color: Color(0XFF5C3B13),
           ),
+          SizedBox(
+            width: 300,
+            child: Row(
+              children: [
+                SizedBox(
+                  
+                //  height: 50,
+                    width: 200
+                  , child: Column(
+                  children: [
+                    Text("تاريخ الانتهاء"),
+                  Text(end_date),
+                  Text("المفروض"),
+                  Text(fullnum)
+                  ],
+                )),
+                Container(),
+                SizedBox(
+                  width: 80,
+                 // height: 70, 
+                  child: Column(children: [
+
+                  Text("تاريخ البدء"),
+                  Text(start_date),
+                  Text("المنجز"),
+                  Text(achievment)
+
+                ],))
+              ],
+            ),
+          )
         ]));
   }
 }

@@ -38,7 +38,7 @@ class _HomePage2State extends State<HomePage2> {
   @override
   Widget build(BuildContext context) {
     return  background(
-      floa: tassbehFlow(),
+      floa: ThekerFlow(),
         isLight: Provider.of<ThemePageProvider>(context).isLighEnable,
         page: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -117,7 +117,7 @@ class _HomePage2State extends State<HomePage2> {
                       color: Provider.of<ThemePageProvider>(context).isLighEnable
                           ? redbrown
                           : browcontainer),
-                  child: tassbehFlow()),
+                  child: ThekerFlow()),
             )
           ],
         ),

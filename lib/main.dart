@@ -3,8 +3,10 @@ import 'package:finalserage/core/theme/theme.dart';
 import 'package:finalserage/feture/kitma/addKitma.dart';
 import 'package:finalserage/feture/kitma/kitmabackgroung.dart';
 import 'package:finalserage/feture/kitma/viewKitma.dart';
-import 'package:finalserage/feture/theker/addTheker.dart';
-import 'package:finalserage/feture/theker/thekerbackground.dart';
+import 'package:finalserage/feture/theker/adding/addTheker.dart';
+import 'package:finalserage/feture/theker/pulley/onePerson.dart';
+import 'package:finalserage/feture/theker/adding/thekerbackground.dart';
+import 'package:finalserage/feture/theker/pulley/background_pulley.dart';
 
 import 'package:finalserage/view/flowPages.dart/flowbytello.dart';
 import 'package:finalserage/view/flowPages.dart/suraFlow.dart';
@@ -30,7 +32,7 @@ class MyApp extends StatelessWidget {
         theme: Provider.of<ThemePageProvider>(context).isLighEnable
             ? modetheme.lightmode
             : modetheme.darkmode
-            ,home: Theker_Background(),
+            ,home: background_Singlepulley(),
             
             );
   }

@@ -24,7 +24,6 @@ class _backgroundState extends State<background> {
   Widget build(BuildContext context) {
     print(DateTime.now().minute);
     return Scaffold(
-      key: scaffoldKey,
       floatingActionButton: widget.floa,
       body: Container(
         width: double.infinity,
